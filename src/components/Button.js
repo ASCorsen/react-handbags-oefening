@@ -1,21 +1,17 @@
 import React from "react";
 
-function Button () {
+function Button (props) {
 
 
     return (
         <>
-            <button onClick={() =>{console.log("to the collection!")}}>
-                to the collection
-            </button>
-            <button onClick={ () => {
-                console.log("pewpew!")
-            }}>
-                shop all bags
-            </button>
-            <button disabled={true} >
-                pre-orders
-            </button>
+        <button
+            type={props.typeOfButton}
+            onClick={props.klikEvent}
+            disabled={props.disabledButton}
+        >{props.children}
+
+        </button>
         </>
 
     )
